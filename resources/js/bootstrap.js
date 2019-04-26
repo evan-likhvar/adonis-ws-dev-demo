@@ -44,8 +44,5 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
-import Ws from '@adonisjs/websocket-client'
 
-window.ws = Ws('ws://127.0.0.1:3333');
-ws.connect();
 

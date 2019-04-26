@@ -64896,11 +64896,12 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  */
 
 
- //import Ws from '@adonisjs/websocket-client'
+ // import Ws from '@adonisjs/websocket-client'
+//
+// window.ws = Ws('ws://127.0.0.1:3333');
+// ws.connect();
 
 Vue.use(vuex__WEBPACK_IMPORTED_MODULE_0__["default"]); //Vue.use(Ws);
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('main-component', __webpack_require__(/*! ./components/MainComponent.vue */ "./resources/js/components/MainComponent.vue").default);
 Vue.component('order-book-buy-component', __webpack_require__(/*! ./components/OrderBookBuyComponent.vue */ "./resources/js/components/OrderBookBuyComponent.vue").default);
@@ -64908,6 +64909,7 @@ Vue.component('order-book-sell-component', __webpack_require__(/*! ./components/
 Vue.component('market-history-component', __webpack_require__(/*! ./components/MarketHistoryComponent.vue */ "./resources/js/components/MarketHistoryComponent.vue").default);
 Vue.component('market-stat-component', __webpack_require__(/*! ./components/MarketStatComponent.vue */ "./resources/js/components/MarketStatComponent.vue").default);
 Vue.component('markets-component', __webpack_require__(/*! ./components/MarketsComponent.vue */ "./resources/js/components/MarketsComponent.vue").default);
+ //console.log('state',store.state)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -64926,13 +64928,9 @@ var app = new Vue({
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
   \***********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _adonisjs_websocket_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @adonisjs/websocket-client */ "./node_modules/@adonisjs/websocket-client/dist/Ws.browser.js");
-/* harmony import */ var _adonisjs_websocket_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_adonisjs_websocket_client__WEBPACK_IMPORTED_MODULE_0__);
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -64973,18 +64971,6 @@ if (token) {
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
  */
-// import Echo from 'laravel-echo'
-// window.Pusher = require('pusher-js');
-
-
-
-window.ws = _adonisjs_websocket_client__WEBPACK_IMPORTED_MODULE_0___default()('ws://127.0.0.1:3333');
-ws.connect(); // window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
-// });
 
 /***/ }),
 
@@ -65457,12 +65443,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _modules_OrderBookBuyModule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/OrderBookBuyModule */ "./resources/js/store/modules/OrderBookBuyModule.js");
-/* harmony import */ var _modules_OrderBookSellModule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/OrderBookSellModule */ "./resources/js/store/modules/OrderBookSellModule.js");
-/* harmony import */ var _modules_MarketHistoryModule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/MarketHistoryModule */ "./resources/js/store/modules/MarketHistoryModule.js");
-/* harmony import */ var _modules_MarketStatModule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/MarketStatModule */ "./resources/js/store/modules/MarketStatModule.js");
-/* harmony import */ var _modules_MarketsModule__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/MarketsModule */ "./resources/js/store/modules/MarketsModule.js");
-/* harmony import */ var _modules_MarketPairsModule__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/MarketPairsModule */ "./resources/js/store/modules/MarketPairsModule.js");
+/* harmony import */ var _adonisjs_websocket_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @adonisjs/websocket-client */ "./node_modules/@adonisjs/websocket-client/dist/Ws.browser.js");
+/* harmony import */ var _adonisjs_websocket_client__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_adonisjs_websocket_client__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_OrderBookBuyModule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/OrderBookBuyModule */ "./resources/js/store/modules/OrderBookBuyModule.js");
+/* harmony import */ var _modules_OrderBookSellModule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/OrderBookSellModule */ "./resources/js/store/modules/OrderBookSellModule.js");
+/* harmony import */ var _modules_MarketHistoryModule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/MarketHistoryModule */ "./resources/js/store/modules/MarketHistoryModule.js");
+/* harmony import */ var _modules_MarketStatModule__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/MarketStatModule */ "./resources/js/store/modules/MarketStatModule.js");
+/* harmony import */ var _modules_MarketsModule__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/MarketsModule */ "./resources/js/store/modules/MarketsModule.js");
+/* harmony import */ var _modules_MarketPairsModule__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/MarketPairsModule */ "./resources/js/store/modules/MarketPairsModule.js");
 
 
 
@@ -65471,15 +65459,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+window.ws = _adonisjs_websocket_client__WEBPACK_IMPORTED_MODULE_2___default()('ws://127.0.0.1:3333');
+ws.connect();
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
   modules: {
-    orderBookBuy: _modules_OrderBookBuyModule__WEBPACK_IMPORTED_MODULE_2__["default"],
-    orderBookSell: _modules_OrderBookSellModule__WEBPACK_IMPORTED_MODULE_3__["default"],
-    marketHistory: _modules_MarketHistoryModule__WEBPACK_IMPORTED_MODULE_4__["default"],
-    marketStat: _modules_MarketStatModule__WEBPACK_IMPORTED_MODULE_5__["default"],
-    markets: _modules_MarketsModule__WEBPACK_IMPORTED_MODULE_6__["default"],
-    marketPair: _modules_MarketPairsModule__WEBPACK_IMPORTED_MODULE_7__["default"]
+    orderBookBuy: _modules_OrderBookBuyModule__WEBPACK_IMPORTED_MODULE_3__["default"],
+    orderBookSell: _modules_OrderBookSellModule__WEBPACK_IMPORTED_MODULE_4__["default"],
+    marketHistory: _modules_MarketHistoryModule__WEBPACK_IMPORTED_MODULE_5__["default"],
+    marketStat: _modules_MarketStatModule__WEBPACK_IMPORTED_MODULE_6__["default"],
+    markets: _modules_MarketsModule__WEBPACK_IMPORTED_MODULE_7__["default"],
+    marketPair: _modules_MarketPairsModule__WEBPACK_IMPORTED_MODULE_8__["default"]
   }
 }));
 

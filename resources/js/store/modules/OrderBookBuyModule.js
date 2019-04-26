@@ -14,7 +14,13 @@ const getters = {
 
 
 const actions = {
+
+
+
     getOrderBookBuy ({dispatch, commit},pair) {
+
+
+
 
         let OrderBookBuy = ws.getSubscription('data:'+pair+'-OrderBookBuy');
 
@@ -28,6 +34,9 @@ const actions = {
             commit('setOrderBookBuy',{data:(message.data)});
         })
     }
+
+
+
 };
 
 

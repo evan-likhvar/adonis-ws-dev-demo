@@ -17,8 +17,11 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 import Vuex from 'vuex'
-
 import 'babel-polyfill'
+// import Ws from '@adonisjs/websocket-client'
+//
+// window.ws = Ws('ws://127.0.0.1:3333');
+// ws.connect();
 
 Vue.use(Vuex);
 //Vue.use(Ws);
@@ -32,6 +35,8 @@ Vue.component('market-stat-component', require('./components/MarketStatComponent
 Vue.component('markets-component', require('./components/MarketsComponent.vue').default);
 
 import store from './store/index'
+
+//console.log('state',store.state)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
